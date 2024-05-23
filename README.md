@@ -59,10 +59,11 @@ myvpn
 
 要在后台静默运行 OpenVPN，你可以使用 `nohup` 命令，它允许你在后台运行一个命令，并且即使退出终端，该命令也会继续运行。
 
-你可以将 `nohup` 与你的别名一起使用，像这样：
+
+尝试以下命令，使用正确的语法来将日志输出重定向到 `/dev/null`：
 
 ```bash
-nohup myvpn &
+nohup openvpn /etc/openvpn/xg2.ovpn > /dev/null &
 ```
 
-这将以后台方式启动 OpenVPN，并且不受终端关闭的影响。
+这个命令使用了 `nohup` 来确保即使终端关闭，也能继续运行 OpenVPN，同时将输出重定向到 `/dev/null` 中，这样连接日志就不会打印到终端上。
