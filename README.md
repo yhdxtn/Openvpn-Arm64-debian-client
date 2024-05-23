@@ -55,4 +55,14 @@ source ~/.bashrc
 myvpn
 ```
 
-这会启动 OpenVPN 并使用指定的配置文件 `/etc/openvpn/xg2.ovpn`。
+这会启动 OpenVPN 并使用指定的配置文件 `/etc/openvpn/<your_config_file>.ovpn`。
+
+要在后台静默运行 OpenVPN，你可以使用 `nohup` 命令，它允许你在后台运行一个命令，并且即使退出终端，该命令也会继续运行。
+
+你可以将 `nohup` 与你的别名一起使用，像这样：
+
+```bash
+nohup myvpn &
+```
+
+这将以后台方式启动 OpenVPN，并且不受终端关闭的影响。
