@@ -36,7 +36,7 @@
 
 2. 在文件末尾添加以下行，用于设置 OpenVPN 别名：
    ```bash
-   alias myvpn='/usr/sbin/openvpn --config /etc/openvpn/xg2.ovpn'
+   alias myvpn='/usr/sbin/openvpn --config /etc/openvpn/<your_config_file>.ovpn'
    ```
 
 3. 保存并关闭文件。
