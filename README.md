@@ -56,14 +56,34 @@ myvpn
 ```
 
 这会启动 OpenVPN 并使用指定的配置文件 `/etc/openvpn/<your_config_file>.ovpn`。
-
+#后台运行
 要在后台静默运行 OpenVPN，你可以使用 `nohup` 命令，它允许你在后台运行一个命令，并且即使退出终端，该命令也会继续运行。
 
 
-尝试以下命令，使用正确的语法来将日志输出重定向到 `/dev/null`：
+
 
 ```bash
 nohup openvpn /etc/openvpn/xg2.ovpn > /dev/null &
 ```
 
 这个命令使用了 `nohup` 来确保即使终端关闭，也能继续运行 OpenVPN，同时将输出重定向到 `/dev/null` 中，这样连接日志就不会打印到终端上。
+#关闭openvpn
+要关闭在后台运行的 OpenVPN，可以使用 `kill` 命令来发送信号给 OpenVPN 进程，让它终止。你可以按照以下步骤操作：
+
+1. 首先，使用 `ps` 命令查找正在运行的 OpenVPN 进程的 PID（进程 ID）。在终端中输入以下命令：
+
+```bash
+ps aux | grep openvpn
+```
+
+这会列出所有包含 "openvpn" 字符串的进程，并显示它们的 PID。
+
+2. 找到属于 OpenVPN 的进程，记下它的 PID。
+
+3. 然后，使用 `kill` 命令发送信号给该进程，终止它。假设 PID 是 923，那么命令将是：
+
+```bash
+sudo kill 923
+```
+
+这会向 PID 为 923 的进程发送终止信号，关闭 OpenVPN。
