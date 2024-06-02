@@ -7,7 +7,13 @@
    wget https://github.com/yhdxtn/Openvpn-Arm64-debian-client/raw/main/libpkcs11-helper1_1.25.1-1_arm64.deb
    wget https://github.com/yhdxtn/Openvpn-Arm64-debian-client/raw/main/openvpn_2.4.7-1+deb10u1_arm64.deb
    ```
-
+或者
+   bash'''
+   curl -O -L https://github.com/yhdxtn/Openvpn-Arm64-debian-client/raw/main/iproute2_5.10.0-4_arm64.deb
+   curl -O -L https://github.com/yhdxtn/Openvpn-Arm64-debian-client/raw/main/libbpf0_0.3-2_arm64.deb
+   curl -O -L https://github.com/yhdxtn/Openvpn-Arm64-debian-client/raw/main/libpkcs11-helper1_1.25.1-1_arm64.deb
+   curl -O -L https://github.com/yhdxtn/Openvpn-Arm64-debian-client/raw/main/openvpn_2.4.7-1+deb10u1_arm64.deb
+   '''
 2. **安装 `.deb` 文件：**
    ```bash
    sudo dpkg -i iproute2_5.10.0-4_arm64.deb
