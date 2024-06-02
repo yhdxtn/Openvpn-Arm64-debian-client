@@ -16,10 +16,12 @@
    '''
 2. **安装 `.deb` 文件：**
    ```bash
-   sudo dpkg -i iproute2_5.10.0-4_arm64.deb
-   sudo dpkg -i libbpf0_0.3-2_arm64.deb
-   sudo dpkg -i libpkcs11-helper1_1.25.1-1_arm64.deb
-   sudo dpkg -i openvpn_2.4.7-1+deb10u1_arm64.deb
+
+sudo dpkg -i libbpf0_0.3-2_arm64.deb
+sudo dpkg -i libpkcs11-helper1_1.25.1-1_arm64.deb
+sudo dpkg -i iproute2_5.10.0-4_arm64.deb
+sudo dpkg -i openvpn_2.4.7-1+deb10u1_arm64.deb
+
    ```
 
 3. **将 OpenVPN 服务器配置文件放置到 `/etc/openvpn/` 目录中。**
